@@ -25,7 +25,7 @@
 | [UCI HAR](https://archive.ics.uci.edu/ml/datasets/human+activity+recognition+using+smartphones) | 스마트폰 IMU 센서 기반 6가지 일상 활동 수록 |
 | [WISDM](https://www.cis.fordham.edu/wisdm/dataset.php) | 가속도 기반 행동 인식, 다양한 일상 행동 포함 |
 | [PAMAP2](https://archive.ics.uci.edu/ml/datasets/PAMAP2+Physical+Activity+Monitoring) | 고해상도 센서, 12개 활동 포함 |
-| mHealth | [mhealth_full.csv](./mhealth_full.csv) 직접 제공 (공식 링크 없음) |
+| mHealth | Google Drive로 직접 제공됨 ([mhealth_full.csv 다운로드](https://drive.google.com/file/d/1LL6F1uUtkGPbP7WiOs1L4Xic2YadD_cF/view?usp=sharing)) |
 
 ---
 
@@ -111,17 +111,33 @@
 
 ---
 
-## 📁 레포지토리 구조
+## 📁 레포지토리 구성 및 실행 방법
+
+- `250112_UCI(Static)_AttentionFusion(Trans, RESNet)_962.ipynb`  
+  → 정적 활동 인식 모델 노트북
+
+- `250123_UCI_dynamic_PCA_98.ipynb`  
+  → 동적 활동 인식 모델 노트북
+
+- `HAR_CM_250222.xlsx`  
+  → 전체 모델 성능 지표 및 혼동 행렬 정리 파일
+
+- `mhealth_full.csv`  
+  → Google Drive에서 직접 다운로드 필요 (위 링크 참고)
+
+- `images/` 폴더  
+  → 모델 아키텍처 시각화 이미지 저장
+
+---
+
+### 🛠️ 실행 방법
 
 ```bash
-HumanActivityReconition/
-├── 250112_UCI(Static)_AttentionFusion(Trans, RESNet)_962.ipynb
-├── 250123_UCI_dynamic_PCA_98.ipynb
-├── HAR_CM_250222.xlsx
-├── mhealth_full.csv
-├── images/
-│   ├── static_model_overall.png
-│   ├── static_model_transformer.png
-│   ├── static_model_resnet.png
-│   └── dynamic_model.png
-└── README.md
+# 1. GitHub 레포지토리 클론
+git clone https://github.com/Uchan99/HumanActivityReconition.git
+
+# 2. Jupyter Notebook에서 아래 파일 실행
+- 250112_UCI(Static)_AttentionFusion(Trans, RESNet)_962.ipynb
+- 250123_UCI_dynamic_PCA_98.ipynb
+
+# 3. 노트북 상단 셀 따라 라이브러리 설치 및 데이터 경로 지정 후 실행
