@@ -98,16 +98,32 @@
 | WISDM     | 97.79   | 97.97   | 97.24   | <mark>98.71</mark>     | 97.42   |
 | mHealth   | 100.00  | 100.00  | 100.00  | <mark>100.00</mark>    | 100.00  |
 
+> Transformer Blcok 수에 따른 Static 모델 성능 및 LSTM Blcok 수에 따른 Dynamic 모델 성능도 다음과 같이 계산
+
 ---
 
-## 🔍 혼동 행렬 예시 (UCI-HAR, Static)
+## 🔍 혼동 행렬 
+### UCI-HAR, Static
 
 | 실제\예측 | Sitting | Standing | Laying |
 |-----------|---------|----------|--------|
 | Sitting   | <mark>452</mark> | 39       | 0      |
 | Standing  | 19      | <mark>513</mark>  | 0      |
+| Laying    | 0     | 0  | <mark>537</mark> |
 
-> Recall 기준: Sitting = <mark>92.06%</mark>, Standing = <mark>96.43%</mark>
+
+> Recall 기준: Sitting = <mark>92.06%</mark>, Standing = <mark>96.43%</mark>, Laying = <mark>100%</mark>
+
+### UCI-HAR, Dynamic
+
+| 실제\예측 | Walking | Walking Upstairs | Walking Downstairs |
+|-----------|---------|----------|--------|
+| Walking   | <mark>494</mark> | 1       | 1      |
+| Walking Upstairs  | 24      | <mark>447</mark>  | 0      |
+| Walking Downstairs    | 0     | 0  | <mark>420</mark> |
+
+
+> Recall 기준: Walking = <mark>99.6%</mark>, Walking Upstairs = <mark>94.9%</mark>, Walking Downstairs = <mark>100%</mark>
 
 ---
 
